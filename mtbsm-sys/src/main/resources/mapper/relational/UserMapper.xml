@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.msgtu.sys.mapper.relational.UserMapper">
+    <resultMap id="User" type="org.msgtu.sys.entry.User"/>
+    <select id="findByUserLogin" resultMap="User" parameterType="java.lang.String">
+        select *
+        from user
+        where user_login=#{userlogin}
+    </select>
+
+</mapper>
